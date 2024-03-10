@@ -17,7 +17,7 @@ body{
     font-weight: 900;
 }
 .greetings > span{
-    animation: glow 2.5s ease-in-out infinite;
+    animation: glow 2s ease-in-out infinite;
 }
 @keyframes glow{
     0%, 100%{
@@ -29,6 +29,11 @@ body{
         text-shadow: none;
     }
 }
+
+.greetings > span:nth-child(1){
+    animation-delay: .1s;
+}
+
 .greetings > span:nth-child(2){
     animation-delay: .2s ;
 }
@@ -57,25 +62,80 @@ body{
     animation-delay: 1.2s;
 }
 
+.greetings > span:nth-child(10){
+    animation-delay: 1.4s;
+}
+
+.greetings > span:nth-child(11){
+    animation-delay: 1.6s;
+}
+
+.greetings > span:nth-child(12){
+    animation-delay: 1.8s;
+}
+
 
 
 
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .button{
-  color: red;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.button__flower{
+    padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.button__flower:hover{
+    letter-spacing: 3px;
+  background-color: hsl(297, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(223, 26, 210) 0px 7px 29px 0px;
+}
+
+.button__flower:active{
+    letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
 }
 
 .button a{
     text-decoration: none;
-    font-size: 4rem;
-    color: #111;
+    font-size: 10px;
+    font-weight: 900;
+    color: black;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
 }
 
-
+.button a:hover{
+    color: white;
+}
 
 
 .button__icon{
